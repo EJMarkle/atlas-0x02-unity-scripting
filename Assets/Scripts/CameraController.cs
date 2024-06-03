@@ -7,7 +7,8 @@ public class CameraController : MonoBehaviour
     public GameObject player;
     public Vector3 offset;
     private Transform playerLoc;
-
+    
+    /// preload player location
     void Start()
     {
         playerLoc = player.transform;
@@ -18,6 +19,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
+    /// set camera to player location
     void LateUpdate()
     {
         Vector3 newPosition = playerLoc.position + offset;
