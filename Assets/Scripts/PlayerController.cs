@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     private Rigidbody rb;
     private int score = 0;
+    public int health = 5;
 
     /// Preload get rigidbody component 
     void Start()
@@ -24,9 +25,10 @@ public class PlayerController : MonoBehaviour
         rb.velocity = movement;
     }
 
-    /// On collision with coin, increment player score and deactivate object
+    
     void OnTriggerEnter(Collider other)
     {
+        /// On collision with coin, increment player score and deactivate object
         if (other.gameObject.CompareTag("Pickup"))
         {
             score++;
@@ -34,6 +36,14 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Score: " + score);
 
             other.gameObject.SetActive(false);
+        }
+
+        /// If player collides with trap, decrement health
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            health--;
+  
+            Debug.Log("Health: " + health);
         }
     }
 }
