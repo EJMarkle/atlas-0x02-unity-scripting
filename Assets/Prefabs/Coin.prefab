@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8621544787951977133}
   - component: {fileID: 6734106996740564223}
   - component: {fileID: 2649969973578207609}
+  - component: {fileID: -1093305269295255210}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Pickup
@@ -98,3 +99,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-1093305269295255210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322284797840694291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91264b151083fcf41a723c6c6e96f67c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
