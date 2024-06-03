@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -50,6 +51,20 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Goal"))
         {
             Debug.Log("You win!");
+        }
+    }
+    
+    /// check if dead and reload if
+    void Update()
+    {
+        if (health == 0)
+        {
+            Debug.Log("Game Over!");
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            health = 5;
+            score = 0;
         }
     }
 }
